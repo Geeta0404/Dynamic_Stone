@@ -54,8 +54,8 @@ export default function QuoteForm() {
           Thanks — your request is in!
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-stone-600">
-          We've received your project details and will get back to you within one
-          business day. If it's urgent, give us a call.
+          We&apos;ve received your project details and will get back to you within one
+          business day. If it&apos;s urgent, give us a call.
         </p>
       </div>
     );
