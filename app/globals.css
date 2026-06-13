@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme palettes: each [data-theme] block overrides the accent color
+   variables (terracotta = primary accent, brass = secondary accent).
+   :root holds the default "Daylight" palette. */
+:root {
+  /* "Royal Gold" — primary accent: warm antique gold */
+  --terracotta-50: 250 247 237;
+  --terracotta-100: 244 235 211;
+  --terracotta-200: 231 213 165;
+  --terracotta-300: 214 184 115;
+  --terracotta-400: 196 156 75;
+  --terracotta-500: 181 136 52;
+  --terracotta-600: 148 110 40;
+  --terracotta-700: 115 85 30;
+  --terracotta-800: 86 63 22;
+  --terracotta-900: 61 44 15;
+  /* secondary accent: deep bronze */
+  --brass-50: 247 244 240;
+  --brass-100: 235 226 215;
+  --brass-200: 213 195 173;
+  --brass-300: 184 159 128;
+  --brass-400: 153 122 88;
+  --brass-500: 122 92 60;
+  --brass-600: 99 74 47;
+  --brass-700: 77 57 36;
+  --brass-800: 58 43 27;
+  --brass-900: 41 30 19;
+}
+
+[data-theme="peacock-lounge"] {
+  --terracotta-50: 241 247 247;
+  --terracotta-100: 221 235 235;
+  --terracotta-200: 182 212 212;
+  --terracotta-300: 136 186 186;
+  --terracotta-400: 76 151 151;
+  --terracotta-500: 26 122 122;
+  --terracotta-600: 21 100 100;
+  --terracotta-700: 17 78 78;
+  --terracotta-800: 12 59 59;
+  --terracotta-900: 9 41 41;
+  --brass-50: 241 245 248;
+  --brass-100: 221 231 238;
+  --brass-200: 183 203 218;
+  --brass-300: 137 170 195;
+  --brass-400: 79 128 165;
+  --brass-500: 29 92 140;
+  --brass-600: 24 75 115;
+  --brass-700: 19 59 90;
+  --brass-800: 14 44 67;
+  --brass-900: 10 31 48;
+}
+
+[data-theme="bumblebee"] {
+  --terracotta-50: 254 251 240;
+  --terracotta-100: 253 246 217;
+  --terracotta-200: 251 235 173;
+  --terracotta-300: 248 223 122;
+  --terracotta-400: 245 207 56;
+  --terracotta-500: 242 194 0;
+  --terracotta-600: 198 159 0;
+  --terracotta-700: 155 124 0;
+  --terracotta-800: 116 93 0;
+  --terracotta-900: 82 66 0;
+  --brass-50: 241 241 241;
+  --brass-100: 221 221 221;
+  --brass-200: 182 182 182;
+  --brass-300: 136 136 136;
+  --brass-400: 76 76 76;
+  --brass-500: 26 26 26;
+  --brass-600: 21 21 21;
+  --brass-700: 17 17 17;
+  --brass-800: 12 12 12;
+  --brass-900: 9 9 9;
+}
+
+[data-theme="royal-indigo"] {
+  --terracotta-50: 244 243 248;
+  --terracotta-100: 228 226 238;
+  --terracotta-200: 197 194 219;
+  --terracotta-300: 161 155 196;
+  --terracotta-400: 115 105 167;
+  --terracotta-500: 75 63 142;
+  --terracotta-600: 62 52 116;
+  --terracotta-700: 48 40 91;
+  --terracotta-800: 36 30 68;
+  --terracotta-900: 26 21 48;
+  --brass-50: 242 245 250;
+  --brass-100: 224 230 242;
+  --brass-200: 188 202 227;
+  --brass-300: 146 169 210;
+  --brass-400: 92 126 187;
+  --brass-500: 46 90 168;
+  --brass-600: 38 74 138;
+  --brass-700: 29 58 108;
+  --brass-800: 22 43 81;
+  --brass-900: 16 31 57;
+}
+
+[data-theme="northern-lights"] {
+  --terracotta-50: 242 249 248;
+  --terracotta-100: 221 240 238;
+  --terracotta-200: 183 224 219;
+  --terracotta-300: 139 205 196;
+  --terracotta-400: 80 179 167;
+  --terracotta-500: 31 158 142;
+  --terracotta-600: 25 130 116;
+  --terracotta-700: 20 101 91;
+  --terracotta-800: 15 76 68;
+  --terracotta-900: 11 54 48;
+  --brass-50: 242 247 251;
+  --brass-100: 223 236 246;
+  --brass-200: 187 214 235;
+  --brass-300: 144 188 223;
+  --brass-400: 89 155 207;
+  --brass-500: 42 127 193;
+  --brass-600: 34 104 158;
+  --brass-700: 27 81 124;
+  --brass-800: 20 61 93;
+  --brass-900: 14 43 66;
+}
+
+[data-theme="midnight-violet"] {
+  --terracotta-50: 246 243 249;
+  --terracotta-100: 233 226 241;
+  --terracotta-200: 208 194 225;
+  --terracotta-300: 178 155 206;
+  --terracotta-400: 140 105 181;
+  --terracotta-500: 107 63 160;
+  --terracotta-600: 88 52 131;
+  --terracotta-700: 68 40 102;
+  --terracotta-800: 51 30 77;
+  --terracotta-900: 36 21 54;
+  --brass-50: 243 242 245;
+  --brass-100: 225 222 230;
+  --brass-200: 192 185 202;
+  --brass-300: 153 141 169;
+  --brass-400: 101 84 126;
+  --brass-500: 58 36 89;
+  --brass-600: 48 30 73;
+  --brass-700: 37 23 57;
+  --brass-800: 28 17 43;
+  --brass-900: 20 12 30;
+}
+
+[data-theme="crimson-night"] {
+  --terracotta-50: 251 242 242;
+  --terracotta-100: 244 222 224;
+  --terracotta-200: 232 184 188;
+  --terracotta-300: 218 139 146;
+  --terracotta-400: 200 81 92;
+  --terracotta-500: 184 32 46;
+  --terracotta-600: 151 26 38;
+  --terracotta-700: 118 20 29;
+  --terracotta-800: 88 15 22;
+  --terracotta-900: 63 11 16;
+  --brass-50: 247 241 242;
+  --brass-100: 235 220 222;
+  --brass-200: 212 180 184;
+  --brass-300: 186 134 139;
+  --brass-400: 151 73 81;
+  --brass-500: 122 22 32;
+  --brass-600: 100 18 26;
+  --brass-700: 78 14 20;
+  --brass-800: 59 11 15;
+  --brass-900: 41 7 11;
+}
+
+[data-theme="sunset-ember"] {
+  --terracotta-50: 254 247 243;
+  --terracotta-100: 252 234 226;
+  --terracotta-200: 248 211 192;
+  --terracotta-300: 243 183 153;
+  --terracotta-400: 237 147 102;
+  --terracotta-500: 232 116 59;
+  --terracotta-600: 190 95 48;
+  --terracotta-700: 148 74 38;
+  --terracotta-800: 111 56 28;
+  --terracotta-900: 79 39 20;
+  --brass-50: 251 244 246;
+  --brass-100: 246 227 232;
+  --brass-200: 236 195 207;
+  --brass-300: 224 158 177;
+  --brass-400: 209 110 138;
+  --brass-500: 196 69 105;
+  --brass-600: 161 57 86;
+  --brass-700: 125 44 67;
+  --brass-800: 94 33 50;
+  --brass-900: 67 23 36;
+}
+
+[data-theme="cyber-volt"] {
+  --terracotta-50: 249 253 240;
+  --terracotta-100: 241 250 217;
+  --terracotta-200: 224 245 173;
+  --terracotta-300: 205 239 122;
+  --terracotta-400: 180 231 56;
+  --terracotta-500: 159 224 0;
+  --terracotta-600: 130 184 0;
+  --terracotta-700: 102 143 0;
+  --terracotta-800: 76 108 0;
+  --terracotta-900: 54 76 0;
+  --brass-50: 243 248 245;
+  --brass-100: 225 238 231;
+  --brass-200: 192 218 203;
+  --brass-300: 153 195 171;
+  --brass-400: 101 165 129;
+  --brass-500: 58 140 94;
+  --brass-600: 48 115 77;
+  --brass-700: 37 90 60;
+  --brass-800: 28 67 45;
+  --brass-900: 20 48 32;
+}
+
+[data-theme="rose-noir"] {
+  --terracotta-50: 250 245 246;
+  --terracotta-100: 244 229 233;
+  --terracotta-200: 231 200 207;
+  --terracotta-300: 215 166 178;
+  --terracotta-400: 196 121 139;
+  --terracotta-500: 179 83 106;
+  --terracotta-600: 147 68 87;
+  --terracotta-700: 115 53 68;
+  --terracotta-800: 86 40 51;
+  --terracotta-900: 61 28 36;
+  --brass-50: 246 242 243;
+  --brass-100: 233 223 226;
+  --brass-200: 209 187 193;
+  --brass-300: 180 145 155;
+  --brass-400: 142 90 104;
+  --brass-500: 110 44 62;
+  --brass-600: 90 36 51;
+  --brass-700: 70 28 40;
+  --brass-800: 53 21 30;
+  --brass-900: 37 15 21;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fdfcfa;
+  color: #28221c;
+}
+
+/* Terrazzo-inspired speckle texture, used as a subtle background accent */
+.terrazzo-bg {
+  background-color: #efeae3;
+  background-image:
+    radial-gradient(circle at 12% 28%, rgb(var(--terracotta-500)) 0, rgb(var(--terracotta-500)) 6px, transparent 7px),
+    radial-gradient(circle at 78% 14%, rgb(var(--brass-400)) 0, rgb(var(--brass-400)) 5px, transparent 6px),
+    radial-gradient(circle at 35% 68%, #211c17 0, #211c17 4px, transparent 5px),
+    radial-gradient(circle at 90% 60%, rgb(var(--terracotta-400)) 0, rgb(var(--terracotta-400)) 4px, transparent 5px),
+    radial-gradient(circle at 60% 85%, #ad9580 0, #ad9580 7px, transparent 8px),
+    radial-gradient(circle at 22% 90%, rgb(var(--brass-400)) 0, rgb(var(--brass-400)) 3px, transparent 4px),
+    radial-gradient(circle at 50% 40%, rgb(var(--terracotta-300)) 0, rgb(var(--terracotta-300)) 5px, transparent 6px),
+    radial-gradient(circle at 8% 60%, #8f7762 0, #8f7762 3px, transparent 4px);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.terrazzo-dark {
+  background-color: #211c17;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgb(var(--terracotta-400)) 0, rgb(var(--terracotta-400)) 7px, transparent 8px),
+    radial-gradient(circle at 80% 20%, rgb(var(--brass-300)) 0, rgb(var(--brass-300)) 6px, transparent 7px),
+    radial-gradient(circle at 40% 70%, #efeae3 0, #efeae3 4px, transparent 5px),
+    radial-gradient(circle at 92% 65%, rgb(var(--terracotta-300)) 0, rgb(var(--terracotta-300)) 5px, transparent 6px),
+    radial-gradient(circle at 65% 88%, rgb(var(--brass-400)) 0, rgb(var(--brass-400)) 8px, transparent 9px),
+    radial-gradient(circle at 25% 92%, rgb(var(--brass-300)) 0, rgb(var(--brass-300)) 4px, transparent 5px),
+    radial-gradient(circle at 55% 45%, rgb(var(--terracotta-300)) 0, rgb(var(--terracotta-300)) 6px, transparent 7px),
+    radial-gradient(circle at 5% 55%, #efeae3 0, #efeae3 3px, transparent 4px);
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
