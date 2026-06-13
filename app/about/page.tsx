@@ -99,17 +99,17 @@ export default function AboutPage() {
               <p>
                 Dynamic Stone Inc. started in {siteConfig.founded} with a simple idea:
                 terrazzo done properly — mixed, poured, and polished with the same care
-                whether it's a single bathroom floor or an entire office tower lobby.
+                whether it is a single bathroom floor or an entire office tower lobby.
               </p>
               <p>
-                Three decades later, that idea hasn't changed. We're still a
+                Three decades later, that idea has not changed. We are still a
                 Vancouver-based, hands-on team. Many of our clients come back to us for
                 a second or third project, and a good number found us because a
                 contractor or building manager recommended our work from a job we did
                 years earlier.
               </p>
               <p>
-                We've poured terrazzo in heritage homes in Shaughnessy, restaurant bars
+                We have poured terrazzo in heritage homes in Shaughnessy, restaurant bars
                 in Mount Pleasant, gymnasium floors in Burnaby, and lobby floors in
                 Coal Harbour high-rises. Every project gets the same attention to
                 detail — because the work has to look right for the next forty years,
@@ -204,7 +204,7 @@ export default function AboutPage() {
               />
               <p className="mt-6 text-base leading-relaxed text-stone-600">
                 Thirty years in business comes down to a handful of principles
-                we don't compromise on — no matter how big or small the job.
+                we do not compromise on — no matter how big or small the job.
                 Click through to see what guides our work, from the first
                 site visit to the final polish.
               </p>

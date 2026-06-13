@@ -21,7 +21,7 @@ export default function QuotePage() {
             Tell us about your project.
           </h1>
           <p className="mt-6 text-base leading-relaxed text-stone-600">
-            Fill out the form and we&apos;ll get back to you within one business day with
+            Fill out the form and we will get back to you within one business day with
             next steps — usually a short call or site visit to scope the work
             accurately.
           </p>

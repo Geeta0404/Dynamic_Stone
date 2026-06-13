@@ -74,7 +74,7 @@ export default function CareMaintenancePage() {
         />
         <div className="relative mx-auto max-w-4xl px-6 py-16 text-center lg:px-10 lg:py-24">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-terracotta-300">
-            Care &amp; Maintenance
+            Care and Maintenance
           </p>
           <h1 className="font-serif text-4xl font-bold capitalize leading-[1.1] text-cream-50 sm:text-5xl">
             Keeping your terrazzo beautiful for decades
@@ -82,10 +82,10 @@ export default function CareMaintenancePage() {
           <span className="mx-auto mt-6 block h-[3px] w-20 rounded-full bg-gradient-to-r from-terracotta-300 to-brass-300" aria-hidden="true" />
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-cream-100/75">
             Terrazzo is one of the lowest-maintenance surfaces you can choose —
-            but a little routine care goes a long way. Here's how to clean,
+            but a little routine care goes a long way. Here is how to clean,
             protect, and reseal your floors and countertops, based on what
-            we've learned over 30 years of installing terrazzo across
-            Vancouver &amp; the Lower Mainland.
+            we have learned over 30 years of installing terrazzo across
+            Vancouver and the Lower Mainland.
           </p>
         </div>
       </section>
@@ -170,8 +170,8 @@ export default function CareMaintenancePage() {
             </table>
           </div>
           <p className="mt-4 text-center text-sm text-cream-100/60">
-            Not sure if it's time to reseal? A simple test: if water no longer
-            beads on the surface and instead soaks in, it's time.
+            Not sure if it is time to reseal? A simple test: if water no longer
+            beads on the surface and instead soaks in, it is time.
           </p>
         </div>
       </section>
@@ -221,8 +221,8 @@ export default function CareMaintenancePage() {
           <div className="mt-12 text-center">
             <p className="mx-auto max-w-2xl text-sm leading-relaxed text-stone-600">
               Every completed project comes with a care guide tailored to your
-              specific terrazzo system. If you're not sure how to handle a
-              stain or whether it's time to reseal, just reach out — we're
+              specific terrazzo system. If you are not sure how to handle a
+              stain or whether it is time to reseal, just reach out — we are
               happy to help.
             </p>
             <div className="mt-6">
