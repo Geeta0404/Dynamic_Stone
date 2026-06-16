@@ -167,8 +167,12 @@ export default function HomePage() {
       </section>
 
       {/* Process strip */}
-      <section className="bg-stone-950 py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section className="relative overflow-hidden bg-stone-950 py-20 lg:py-28">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-40 [background-image:repeating-linear-gradient(45deg,rgba(212,165,116,0.08)_0px,rgba(212,165,116,0.08)_1px,transparent_1px,transparent_32px),repeating-linear-gradient(-45deg,rgba(212,165,116,0.08)_0px,rgba(212,165,116,0.08)_1px,transparent_1px,transparent_32px)]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
           <SectionHeading
             eyebrow="How We Work"
             title="A clear process, from first call to final polish"
@@ -253,8 +257,12 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-stone-950 py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section className="relative overflow-hidden bg-stone-950 py-20 lg:py-28">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-40 [background-image:repeating-linear-gradient(45deg,rgba(212,165,116,0.08)_0px,rgba(212,165,116,0.08)_1px,transparent_1px,transparent_32px),repeating-linear-gradient(-45deg,rgba(212,165,116,0.08)_0px,rgba(212,165,116,0.08)_1px,transparent_1px,transparent_32px)]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
           <SectionHeading
             eyebrow="Client Stories"
             title="Trusted by homeowners, contractors, and developers"

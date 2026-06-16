@@ -59,6 +59,51 @@ export default function HeroCarousel({
       <div className="absolute inset-0 bg-stone-950/20" />
 
       {slides.length > 1 && (
+        <>
+          <button
+            type="button"
+            aria-label="Previous slide"
+            onClick={() => goTo(active - 1)}
+            className="absolute left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-cream-100/20 bg-stone-900/40 text-cream-50 backdrop-blur-sm transition-colors hover:bg-stone-900/70 hover:border-terracotta-300/40 sm:left-6"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5"
+              aria-hidden="true"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            aria-label="Next slide"
+            onClick={() => goTo(active + 1)}
+            className="absolute right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-cream-100/20 bg-stone-900/40 text-cream-50 backdrop-blur-sm transition-colors hover:bg-stone-900/70 hover:border-terracotta-300/40 sm:right-6"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5"
+              aria-hidden="true"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </>
+      )}
+
+      {slides.length > 1 && (
         <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
           {slides.map((slide, i) => (
             <button

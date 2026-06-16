@@ -36,6 +36,10 @@ export default function PortfolioPage() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-stone-950">
         <div
+          className="pointer-events-none absolute inset-0 opacity-40 [background-image:repeating-linear-gradient(45deg,rgba(212,165,116,0.08)_0px,rgba(212,165,116,0.08)_1px,transparent_1px,transparent_32px),repeating-linear-gradient(-45deg,rgba(212,165,116,0.08)_0px,rgba(212,165,116,0.08)_1px,transparent_1px,transparent_32px)]"
+          aria-hidden="true"
+        />
+        <div
           className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-gradient-to-br from-terracotta-500/20 to-transparent blur-3xl"
           aria-hidden="true"
         />
@@ -69,8 +73,12 @@ export default function PortfolioPage() {
       </section>
 
       {/* Gallery: Before & After */}
-      <section className="bg-stone-950 py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section className="relative overflow-hidden bg-stone-950 py-20 lg:py-28">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-40 [background-image:repeating-linear-gradient(45deg,rgba(212,165,116,0.08)_0px,rgba(212,165,116,0.08)_1px,transparent_1px,transparent_32px),repeating-linear-gradient(-45deg,rgba(212,165,116,0.08)_0px,rgba(212,165,116,0.08)_1px,transparent_1px,transparent_32px)]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
           <SectionHeading
             eyebrow="Gallery"
             title="Before & after transformations"

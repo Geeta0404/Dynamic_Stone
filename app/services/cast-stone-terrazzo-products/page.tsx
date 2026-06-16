@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
+import MaterialGallery from "@/components/MaterialGallery";
 
 export const metadata: Metadata = {
   title: "Cast Stone / Terrazzo Products",
@@ -53,6 +54,10 @@ export default function CastStoneProductsPage() {
     <>
       <section className="relative overflow-hidden bg-stone-950">
         <div
+          className="pointer-events-none absolute inset-0 opacity-40 [background-image:repeating-linear-gradient(45deg,rgba(212,165,116,0.08)_0px,rgba(212,165,116,0.08)_1px,transparent_1px,transparent_32px),repeating-linear-gradient(-45deg,rgba(212,165,116,0.08)_0px,rgba(212,165,116,0.08)_1px,transparent_1px,transparent_32px)]"
+          aria-hidden="true"
+        />
+        <div
           className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-gradient-to-br from-terracotta-500/20 to-transparent blur-3xl"
           aria-hidden="true"
         />
@@ -76,22 +81,34 @@ export default function CastStoneProductsPage() {
             </p>
           </div>
           <div className="relative">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-soft ring-1 ring-terracotta-300/20 lg:aspect-square">
-              <Image
-                src="/images/Cast Stone -Terrazzo Products/Precast Terrazzo Steps.jpg"
-                alt="Custom precast terrazzo steps"
-                fill
-                priority
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-4 z-10 flex items-center gap-3 rounded-2xl border border-terracotta-200 bg-white px-5 py-4 shadow-soft sm:-left-8">
-              <span className="font-serif text-3xl font-bold text-terracotta-500">30+</span>
-              <span className="max-w-[7rem] text-xs font-semibold uppercase leading-tight tracking-[0.15em] text-stone-600">
-                Years of Craftsmanship
-              </span>
-            </div>
+            <MaterialGallery
+              images={[
+                {
+                  src: "/images/Homepage_img1.png",
+                  alt: "Polished terrazzo entranceway flooring crafted by Dynamic Stone Inc",
+                },
+                {
+                  src: "/images/Homepage_img2.jpg",
+                  alt: "Custom terrazzo inlay pattern with contrasting aggregate colours",
+                },
+                {
+                  src: "/images/Homepage_img3.jpg",
+                  alt: "Custom cast terrazzo reception desk in a commercial lobby",
+                },
+                {
+                  src: "/images/Homepage_img4.jpg",
+                  alt: "Custom terrazzo flooring with inlaid logo using coloured aggregate and metal dividers",
+                },
+                {
+                  src: "/images/Homepage_img5.jpeg",
+                  alt: "Custom terrazzo fireplace surround inside a Vancouver-area spa",
+                },
+                {
+                  src: "/images/Homepage_img6.jpg",
+                  alt: "Weather-resistant precast terrazzo exterior steps crafted by Dynamic Stone Inc",
+                },
+              ]}
+            />
           </div>
         </div>
       </section>
@@ -187,8 +204,12 @@ export default function CastStoneProductsPage() {
       </section>
 
       {/* Precast Steps */}
-      <section className="bg-stone-950 py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section className="relative overflow-hidden bg-stone-950 py-20 lg:py-28">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-40 [background-image:repeating-linear-gradient(45deg,rgba(212,165,116,0.08)_0px,rgba(212,165,116,0.08)_1px,transparent_1px,transparent_32px),repeating-linear-gradient(-45deg,rgba(212,165,116,0.08)_0px,rgba(212,165,116,0.08)_1px,transparent_1px,transparent_32px)]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <div>
               <SectionHeading

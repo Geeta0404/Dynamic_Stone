@@ -8,7 +8,13 @@ type GalleryImage = {
   alt: string;
 };
 
-export default function MaterialGallery({ images }: { images: GalleryImage[] }) {
+export default function MaterialGallery({
+  images,
+  variant = "default",
+}: {
+  images: GalleryImage[];
+  variant?: "default" | "angled";
+}) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const close = () => setActiveIndex(null);
@@ -17,15 +23,27 @@ export default function MaterialGallery({ images }: { images: GalleryImage[] }) 
   const showNext = () =>
     setActiveIndex((i) => (i === null ? null : (i + 1) % images.length));
 
+  const angled = variant === "angled";
+
   return (
     <>
       <div className="relative grid grid-cols-3 gap-4 lg:gap-5">
+        {angled && (
+          <span
+            className="pointer-events-none absolute -right-4 -top-4 z-0 hidden h-[40%] w-[40%] rounded-2xl border-2 border-terracotta-300/60 [clip-path:polygon(16px_0,100%_0,100%_calc(100%-16px),calc(100%-16px)_100%,0_100%,0_16px)] lg:block"
+            aria-hidden="true"
+          />
+        )}
         {images.map((image, i) => (
           <button
             key={image.src}
             type="button"
             onClick={() => setActiveIndex(i)}
-            className="group relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-terracotta-300/30 shadow-soft"
+            className={`group relative z-10 aspect-[4/5] overflow-hidden shadow-soft ${
+              angled
+                ? "ring-1 ring-terracotta-300/30 [clip-path:polygon(16px_0,100%_0,100%_calc(100%-16px),calc(100%-16px)_100%,0_100%,0_16px)]"
+                : "rounded-2xl ring-1 ring-terracotta-300/30"
+            }`}
             aria-label={`View larger image: ${image.alt}`}
           >
             <Image
