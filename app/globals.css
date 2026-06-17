@@ -273,6 +273,8 @@ body {
     radial-gradient(circle at 25% 92%, rgb(var(--brass-300)) 0, rgb(var(--brass-300)) 4px, transparent 5px),
     radial-gradient(circle at 55% 45%, rgb(var(--terracotta-300)) 0, rgb(var(--terracotta-300)) 6px, transparent 7px),
     radial-gradient(circle at 5% 55%, #efeae3 0, #efeae3 3px, transparent 4px);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .fade-in {

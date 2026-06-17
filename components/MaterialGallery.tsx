@@ -76,7 +76,7 @@ export default function MaterialGallery({
         ))}
 
         {/* Floating heritage badge */}
-        <div className="absolute -bottom-6 -right-4 z-10 flex items-center gap-3 rounded-2xl border border-terracotta-200 bg-white px-5 py-4 shadow-soft sm:-right-8">
+        <div className="absolute -bottom-6 right-4 z-10 flex items-center gap-3 rounded-2xl border border-terracotta-200 bg-white px-5 py-4 shadow-soft">
           <span className="font-serif text-3xl font-bold text-terracotta-500">30+</span>
           <span className="max-w-[7rem] text-xs font-semibold uppercase leading-tight tracking-[0.15em] text-stone-600">
             Years of Craftsmanship

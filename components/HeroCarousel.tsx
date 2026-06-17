@@ -33,7 +33,7 @@ export default function HeroCarousel({
   }, [slides.length, interval]);
 
   return (
-    <div className="absolute inset-0 -z-10">
+    <div className="absolute inset-0 -z-10 bg-stone-950">
       {slides.map((slide, i) => (
         <div
           key={slide.src}

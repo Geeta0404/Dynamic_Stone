@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-8 lg:px-10">
         <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:justify-between lg:text-left">
           <Link href="/" className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-cream-100/10 ring-1 ring-cream-100/20" />
+            <span className="flex h-9 w-9 items-center justify-center rounded-full terrazzo-dark ring-1 ring-terracotta-300/50" />
             <span className="font-serif text-lg font-semibold text-cream-50">
               {siteConfig.shortName}
             </span>
@@ -60,11 +60,11 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-4 flex flex-col items-center justify-between gap-2 border-t border-cream-100/10 pt-4 text-xs text-cream-100/50 sm:flex-row">
+        <div className="mt-4 flex flex-col items-center justify-between gap-2 border-t border-cream-100/10 pt-4 text-xs text-cream-100/50 sm:flex-row sm:flex-wrap">
           <p>
             © {year} {siteConfig.name} · Crafting terrazzo in Vancouver since {siteConfig.founded}.
           </p>
-          <p>Site by LaunchPadInc</p>
+          <p className="shrink-0 pr-20">Site by LaunchPadInc</p>
         </div>
       </div>
     </footer>

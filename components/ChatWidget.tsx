@@ -134,7 +134,7 @@ export default function ChatWidget() {
   }
 
   return (
-    <div ref={containerRef} className="fixed bottom-5 right-24 z-50 sm:right-28">
+    <div ref={containerRef} className="fixed bottom-24 right-5 z-50">
       {open && (
         <div className="mb-4 flex h-[28rem] w-80 flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-soft sm:w-96">
           <div className="flex items-center justify-between bg-stone-900 px-5 py-4">

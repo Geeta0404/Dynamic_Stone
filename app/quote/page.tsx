@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import QuoteForm from "@/components/QuoteForm";
 import { siteConfig } from "@/lib/site-config";
 
@@ -65,15 +64,6 @@ export default function QuotePage() {
             </div>
           </div>
 
-          <div className="relative mt-8 hidden aspect-[3/2] w-full overflow-hidden rounded-2xl lg:block">
-            <Image
-              src="/images/terrece.jpg"
-              alt="Custom terrazzo fireplace surround inside a White Rock spa"
-              fill
-              sizes="33vw"
-              className="object-cover"
-            />
-          </div>
         </div>
 
         <div className="lg:col-span-3">
