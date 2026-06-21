@@ -20,19 +20,10 @@ const nextConfig = {
     ],
   },
 
-  // Once the custom domain is live, this sends anyone who still hits the
-  // *.vercel.app preview URL (old links, bookmarks, cached search results)
-  // to the canonical production domain instead of letting both compete.
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: '.*\\.vercel\\.app' }],
-        destination: 'https://www.dynamicstoneinc.com/:path*',
-        permanent: true,
-      },
-    ];
-  },
+  // NOTE: do NOT re-add a *.vercel.app -> dynamicstoneinc.com redirect here
+  // until the custom domain is actually attached to this Vercel project.
+  // dynamicstoneinc.com currently points elsewhere (the client's existing
+  // site), so redirecting to it breaks the only working preview URL.
 };
 
 export default nextConfig;
