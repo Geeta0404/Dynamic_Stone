@@ -7,68 +7,79 @@ type Theme = {
   name: string;
   description: string;
   swatches: [string, string, string];
+  mode: "light" | "dark";
 };
 
 const themes: Theme[] = [
   {
     id: "daylight",
-    name: "Daylight",
-    description: "Terracotta & brass · classic",
-    swatches: ["#e0481f", "#c4881f", "#fdfcfa"],
-  },
-  {
-    id: "peacock-lounge",
-    name: "Peacock Lounge",
-    description: "Teal + peacock blue · luxe",
-    swatches: ["#1a7a7a", "#1d5c8c", "#0c3b3b"],
+    name: "Brass & Stone",
+    description: "Brushed brass & warm taupe · default",
+    swatches: ["#b08d57", "#8c7f60", "#fdfcfa"],
+    mode: "light",
   },
   {
     id: "bumblebee",
     name: "Bumblebee",
     description: "Black & yellow · high voltage",
     swatches: ["#f2c200", "#1a1a1a", "#fdfcfa"],
+    mode: "light",
   },
   {
     id: "royal-indigo",
     name: "Royal Indigo",
     description: "Purple · black · blue · white",
     swatches: ["#4b3f8e", "#2e5aa8", "#fdfcfa"],
+    mode: "light",
   },
   {
     id: "northern-lights",
     name: "Northern Lights",
     description: "Blue & green · aurora",
     swatches: ["#1f9e8e", "#2a7fc1", "#fdfcfa"],
-  },
-  {
-    id: "midnight-violet",
-    name: "Midnight Violet",
-    description: "Purple & black · after dark",
-    swatches: ["#6b3fa0", "#3a2459", "#211c17"],
-  },
-  {
-    id: "crimson-night",
-    name: "Crimson Night",
-    description: "Red & black · bold",
-    swatches: ["#b8202e", "#7a1620", "#211c17"],
+    mode: "light",
   },
   {
     id: "sunset-ember",
     name: "Sunset Ember",
     description: "Orange → rose · warm glow",
     swatches: ["#e8743b", "#c44569", "#fdfcfa"],
+    mode: "light",
   },
   {
-    id: "cyber-volt",
-    name: "Cyber Volt",
-    description: "Lime on black · electric",
-    swatches: ["#9fe000", "#3a8c5e", "#211c17"],
+    id: "graphite-gold",
+    name: "Graphite Gold",
+    description: "Warm gold on cool graphite · dark",
+    swatches: ["#c7a969", "#9aa7b5", "#111316"],
+    mode: "dark",
+  },
+  {
+    id: "peacock-lounge",
+    name: "Peacock Lounge",
+    description: "Teal + peacock blue · luxe",
+    swatches: ["#1a7a7a", "#1d5c8c", "#0c3b3b"],
+    mode: "dark",
+  },
+  {
+    id: "midnight-violet",
+    name: "Midnight Violet",
+    description: "Purple & black · after dark",
+    swatches: ["#6b3fa0", "#3a2459", "#211c17"],
+    mode: "dark",
+  },
+  {
+    id: "crimson-night",
+    name: "Crimson Night",
+    description: "Red & black · bold",
+    swatches: ["#b8202e", "#7a1620", "#211c17"],
+    mode: "dark",
   },
   {
     id: "rose-noir",
     name: "Rose Noir",
     description: "Rose + maroon · velvet",
     swatches: ["#b3536a", "#6e2c3e", "#211c17"],
+    mode: "dark",
   },
 ];
 
@@ -82,8 +93,10 @@ export default function ThemeSwitcher() {
   useEffect(() => {
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (stored) {
+      const theme = themes.find((t) => t.id === stored);
       setActive(stored);
       document.documentElement.setAttribute("data-theme", stored);
+      document.documentElement.setAttribute("data-mode", theme?.mode ?? "light");
     }
   }, []);
 
@@ -104,8 +117,10 @@ export default function ThemeSwitcher() {
   }, [open]);
 
   const selectTheme = (id: string) => {
+    const theme = themes.find((t) => t.id === id);
     setActive(id);
     document.documentElement.setAttribute("data-theme", id);
+    document.documentElement.setAttribute("data-mode", theme?.mode ?? "light");
     window.localStorage.setItem(STORAGE_KEY, id);
   };
 

@@ -19,19 +19,14 @@ export default function SectionHeading({
     <div className={`max-w-2xl ${align === "center" ? "mx-auto text-center" : ""}`}>
       {eyebrow && (
         <p
-          className={`mb-3 text-xs font-semibold uppercase tracking-[0.2em] ${
-            eyebrowClassName || "text-terracotta-600"
-          }`}
+          className={`mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] ${
+            align === "center" ? "justify-center" : ""
+          } ${eyebrowClassName || "text-terracotta-600"}`}
         >
+          <span className="h-px w-5 bg-current" aria-hidden="true" />
           {eyebrow}
         </p>
       )}
-      <span
-        className={`mb-4 block h-[3px] w-14 rounded-full bg-gradient-to-r from-terracotta-400 to-brass-400 ${
-          align === "center" ? "mx-auto" : ""
-        }`}
-        aria-hidden="true"
-      />
       <h2
         className={`font-serif text-3xl font-semibold capitalize leading-tight sm:text-4xl ${
           titleClassName || "text-stone-900"

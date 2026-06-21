@@ -19,12 +19,12 @@ const heroSlides = [
     alt: "Weather-resistant precast terrazzo exterior steps at a Whistler home",
   },
   {
-    src: "/images/Residential and Commercial/project_White Rock Spa.jpg",
-    alt: "Custom terrazzo fireplace surround inside a White Rock spa",
+    src: "/images/Residential and Commercial/project_Reception Desk.jpg",
+    alt: "Custom terrazzo reception desk in a downtown commercial lobby",
   },
   {
-    src: "/images/Custom Terrazzo Design/project_BCAA Custom Inset Logo.jpg",
-    alt: "Custom terrazzo flooring with an inlaid BCAA logo using coloured aggregate and metal dividers",
+    src: "/images/Residential and Commercial/project_Condo Entranceway.jpg",
+    alt: "Polished terrazzo entranceway flooring at a commercial building entrance",
   },
 ];
 
@@ -32,10 +32,11 @@ export const metadata: Metadata = {
   title: "Custom Terrazzo Flooring & Countertops in Vancouver, BC",
   description:
     "Dynamic Stone Inc. has crafted custom terrazzo flooring, countertops, and precast stone for homes and businesses across Vancouver & the Lower Mainland for over 30 years. Get a free quote today.",
+  alternates: { canonical: "/" },
 };
 
 export default function HomePage() {
-  const featuredTestimonials = testimonials.slice(0, 3);
+  const featuredTestimonials = testimonials.slice(0, 4);
   const featuredWork = portfolioItems.slice(0, 3);
 
   return (
@@ -45,13 +46,15 @@ export default function HomePage() {
         <HeroCarousel slides={heroSlides} />
         <div className="mx-auto w-full max-w-5xl px-6 py-24 text-center lg:px-10">
           <div className="fade-in">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-brass-300">
+            <p className="mb-4 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-brass-300">
+              <span className="h-px w-5 bg-current" aria-hidden="true" />
               Vancouver, BC · Est. {siteConfig.founded}
             </p>
             <h1 className="font-serif text-4xl font-bold capitalize leading-[1.1] text-cream-50 sm:text-5xl lg:text-7xl">
-              Terrazzo, crafted to last a lifetime.
+              Terrazzo, crafted
+              <br />
+              to last a <span className="text-terracotta-400">lifetime.</span>
             </h1>
-            <span className="mx-auto mt-6 block h-[3px] w-20 rounded-full bg-gradient-to-r from-terracotta-300 to-brass-300" aria-hidden="true" />
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-cream-100/80">
               Three decades of custom terrazzo flooring, countertops, and surfaces —
               built once, admired for generations.
@@ -71,7 +74,7 @@ export default function HomePage() {
                 <dd className="font-serif text-3xl font-bold text-terracotta-300 sm:text-4xl">450+</dd>
                 <dt className="mt-1 text-sm text-cream-100/70">Projects completed</dt>
               </div>
-              <div className="rounded-2xl border border-terracotta-300/20 bg-cream-50/10 px-6 py-5 backdrop-blur-sm transition-colors hover:bg-cream-50/15 hover:border-terracotta-300/40">
+              <div className="rounded-2xl border border-terracotta-300/20 bg-cream-50/10 pl-6 pr-8 py-5 backdrop-blur-sm transition-colors hover:bg-cream-50/15 hover:border-terracotta-300/40">
                 <dd className="font-serif text-xl font-bold text-terracotta-300 sm:text-2xl">
                   Lower Mainland
                 </dd>
@@ -79,6 +82,39 @@ export default function HomePage() {
               </div>
             </dl>
           </div>
+        </div>
+      </section>
+
+      {/* Ticker */}
+      <div className="group overflow-hidden border-b border-terracotta-500/20 bg-stone-900 py-3">
+        <div className="marquee-track flex w-max gap-12">
+          {[0, 1].map((i) => (
+            <p
+              key={i}
+              aria-hidden={i === 1}
+              className="flex shrink-0 items-center gap-12 whitespace-nowrap text-xs font-bold uppercase tracking-[0.3em] text-cream-100/50"
+            >
+              <span>Terrazzo Flooring &middot; Countertops &middot; Precast Stone &middot; Custom Inlays &middot; Residential &amp; Commercial &middot; Vancouver &amp; the Lower Mainland</span>
+            </p>
+          ))}
+        </div>
+      </div>
+
+      {/* Numbered strip */}
+      <section className="bg-cream-100 py-12">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 sm:grid-cols-4 lg:px-10">
+          {[
+            { n: "01", title: "Consultation", desc: "On-site assessment and material selection for your space." },
+            { n: "02", title: "Design", desc: "Custom colour, pattern, and aggregate mix, drawn up for approval." },
+            { n: "03", title: "Installation", desc: "Precise pour, cure, grind, and polish by our in-house crew." },
+            { n: "04", title: "Lifetime Care", desc: "Maintenance guidance so the finish lasts for decades." },
+          ].map((step) => (
+            <div key={step.n} className="border-t-2 border-terracotta-600 pt-4">
+              <p className="text-xs font-bold text-terracotta-600">{step.n}</p>
+              <h3 className="mt-2 font-serif text-lg font-semibold text-stone-900">{step.title}</h3>
+              <p className="mt-1 text-sm leading-snug text-stone-600">{step.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -249,9 +285,38 @@ export default function HomePage() {
                     {item.title}
                   </h3>
                   <p className="mt-1 text-sm text-stone-500">{item.location}</p>
+                  <p className="mt-4 text-xs font-bold uppercase tracking-[0.15em] text-terracotta-600 transition-transform duration-200 group-hover:translate-x-1">
+                    View Project &rarr;
+                  </p>
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Two ways to start */}
+      <section className="bg-cream-100 py-20 lg:py-28">
+        <div className="mx-auto max-w-3xl px-6 text-center lg:px-10">
+          <p className="mb-3 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-terracotta-600">
+            <span className="h-px w-5 bg-current" aria-hidden="true" />
+            From This Page To A Quote
+          </p>
+          <h2 className="font-serif text-3xl font-semibold leading-tight text-stone-900 sm:text-4xl">
+            Two ways <span className="text-terracotta-600">to start.</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-stone-600">
+            Request a quote and we&rsquo;ll come back with a plan and pricing — or call
+            now if your project can&rsquo;t wait.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Button href="/quote">Request A Quote</Button>
+            <a
+              href={siteConfig.phoneHref}
+              className="inline-flex items-center justify-center gap-2 rounded-md border border-stone-300 px-7 py-3.5 text-xs font-bold uppercase tracking-[0.12em] text-stone-800 transition-colors hover:border-terracotta-600 hover:text-terracotta-600"
+            >
+              Call {siteConfig.phone}
+            </a>
           </div>
         </div>
       </section>

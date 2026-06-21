@@ -9,7 +9,7 @@ export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileOpenHref, setMobileOpenHref] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -20,7 +20,7 @@ export default function Header() {
 
   useEffect(() => {
     setOpen(false);
-    setMobileServicesOpen(false);
+    setMobileOpenHref(null);
   }, [pathname]);
 
   const isActive = (href: string, children?: { href: string }[]) => {
@@ -39,7 +39,7 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <Link href="/" className="flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full terrazzo-dark ring-1 ring-terracotta-300/50" />
+          <span className="flex h-10 w-10 items-center justify-center rounded-full logo-badge ring-1 ring-terracotta-300/50" />
           <span className="font-serif text-xl font-semibold tracking-tight text-cream-50">
             {siteConfig.shortName}
           </span>
@@ -160,8 +160,10 @@ export default function Header() {
                     </Link>
                     <button
                       type="button"
-                      aria-label="Toggle Services submenu"
-                      onClick={() => setMobileServicesOpen((v) => !v)}
+                      aria-label={`Toggle ${link.label} submenu`}
+                      onClick={() =>
+                        setMobileOpenHref((v) => (v === link.href ? null : link.href))
+                      }
                       className="p-2 text-cream-100/60"
                     >
                       <svg
@@ -169,7 +171,7 @@ export default function Header() {
                         viewBox="0 0 20 20"
                         fill="currentColor"
                         className={`h-4 w-4 transition-transform duration-200 ${
-                          mobileServicesOpen ? "rotate-180" : ""
+                          mobileOpenHref === link.href ? "rotate-180" : ""
                         }`}
                       >
                         <path
@@ -180,7 +182,7 @@ export default function Header() {
                       </svg>
                     </button>
                   </div>
-                  {mobileServicesOpen && (
+                  {mobileOpenHref === link.href && (
                     <div className="ml-4 flex flex-col gap-1 border-l border-cream-100/10 pl-4">
                       {link.children.map((child) => (
                         <Link

@@ -27,7 +27,14 @@ export const siteConfig = {
 
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  {
+    href: "/about",
+    label: "About",
+    children: [
+      { href: "/faq", label: "FAQ & Process" },
+      { href: "/care-maintenance", label: "Care & Maintenance" },
+    ],
+  },
   {
     href: "/services",
     label: "Services",
@@ -38,6 +45,4 @@ export const navLinks = [
   },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/testimonials", label: "Testimonials" },
-  { href: "/faq", label: "FAQ & Process" },
-  { href: "/care-maintenance", label: "Care & Maintenance" },
 ];

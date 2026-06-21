@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Three decades of terrazzo craftsmanship in Vancouver. Learn the story, values, and people behind Dynamic Stone Inc.",
+  alternates: { canonical: "/about" },
 };
 
 const values = [
@@ -210,6 +211,8 @@ export default function AboutPage() {
             alt=""
             fill
             sizes="100vw"
+            placeholder="blur"
+            blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiNjNDc0NGEiLz48L3N2Zz4="
             className="object-cover"
           />
           <div className="absolute inset-0 bg-stone-50/60" />

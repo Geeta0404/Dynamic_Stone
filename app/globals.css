@@ -6,28 +6,68 @@
    variables (terracotta = primary accent, brass = secondary accent).
    :root holds the default "Daylight" palette. */
 :root {
-  /* "Royal Gold" — primary accent: warm antique gold */
-  --terracotta-50: 250 247 237;
-  --terracotta-100: 244 235 211;
-  --terracotta-200: 231 213 165;
-  --terracotta-300: 214 184 115;
-  --terracotta-400: 196 156 75;
-  --terracotta-500: 181 136 52;
-  --terracotta-600: 148 110 40;
-  --terracotta-700: 115 85 30;
-  --terracotta-800: 86 63 22;
-  --terracotta-900: 61 44 15;
-  /* secondary accent: deep bronze */
-  --brass-50: 247 244 240;
-  --brass-100: 235 226 215;
-  --brass-200: 213 195 173;
-  --brass-300: 184 159 128;
-  --brass-400: 153 122 88;
-  --brass-500: 122 92 60;
-  --brass-600: 99 74 47;
-  --brass-700: 77 57 36;
-  --brass-800: 58 43 27;
-  --brass-900: 41 30 19;
+  /* "Brass & Stone" — primary accent: brushed brass */
+  --terracotta-50: 247 242 233;
+  --terracotta-100: 237 225 204;
+  --terracotta-200: 219 199 156;
+  --terracotta-300: 199 171 111;
+  --terracotta-400: 176 141 87;
+  --terracotta-500: 154 119 72;
+  --terracotta-600: 124 95 58;
+  --terracotta-700: 95 73 44;
+  --terracotta-800: 70 53 32;
+  --terracotta-900: 46 35 21;
+  /* secondary accent: warm stone taupe */
+  --brass-50: 242 239 234;
+  --brass-100: 226 220 208;
+  --brass-200: 199 188 168;
+  --brass-300: 169 156 126;
+  --brass-400: 140 127 96;
+  --brass-500: 122 106 85;
+  --brass-600: 97 84 69;
+  --brass-700: 74 64 53;
+  --brass-800: 54 47 40;
+  --brass-900: 36 32 27;
+  /* dark-mode surfaces, tinted per theme (fallback) */
+  --dark-0: 20 17 13;
+  --dark-1: 28 24 18;
+  --dark-2: 38 32 26;
+  --dark-border: 51 44 34;
+  --dark-text-1: 240 232 221;
+  --dark-text-2: 201 193 179;
+  --dark-text-3: 150 140 124;
+}
+
+[data-theme="graphite-gold"] {
+  --dark-0: 17 19 22;
+  --dark-1: 26 29 33;
+  --dark-2: 36 40 46;
+  --dark-border: 48 53 60;
+  --dark-text-1: 237 238 240;
+  --dark-text-2: 188 195 204;
+  --dark-text-3: 135 144 156;
+  /* primary accent: warm gold */
+  --terracotta-50: 246 240 226;
+  --terracotta-100: 235 221 190;
+  --terracotta-200: 219 197 145;
+  --terracotta-300: 199 169 105;
+  --terracotta-400: 184 148 84;
+  --terracotta-500: 153 122 68;
+  --terracotta-600: 122 97 54;
+  --terracotta-700: 92 74 41;
+  --terracotta-800: 64 51 28;
+  --terracotta-900: 41 33 18;
+  /* secondary accent: cool steel */
+  --brass-50: 237 240 244;
+  --brass-100: 213 219 227;
+  --brass-200: 188 197 209;
+  --brass-300: 154 167 181;
+  --brass-400: 124 138 153;
+  --brass-500: 98 111 125;
+  --brass-600: 76 88 101;
+  --brass-700: 58 68 79;
+  --brass-800: 42 50 59;
+  --brass-900: 28 33 39;
 }
 
 [data-theme="peacock-lounge"] {
@@ -51,6 +91,13 @@
   --brass-700: 19 59 90;
   --brass-800: 14 44 67;
   --brass-900: 10 31 48;
+  --dark-0: 8 23 23;
+  --dark-1: 14 35 35;
+  --dark-2: 20 48 48;
+  --dark-border: 26 60 60;
+  --dark-text-1: 226 242 242;
+  --dark-text-2: 170 204 204;
+  --dark-text-3: 118 156 156;
 }
 
 [data-theme="bumblebee"] {
@@ -143,6 +190,13 @@
   --brass-700: 37 23 57;
   --brass-800: 28 17 43;
   --brass-900: 20 12 30;
+  --dark-0: 22 15 30;
+  --dark-1: 33 22 45;
+  --dark-2: 45 30 60;
+  --dark-border: 56 38 74;
+  --dark-text-1: 237 232 245;
+  --dark-text-2: 191 178 212;
+  --dark-text-3: 142 128 166;
 }
 
 [data-theme="crimson-night"] {
@@ -166,6 +220,13 @@
   --brass-700: 78 14 20;
   --brass-800: 59 11 15;
   --brass-900: 41 7 11;
+  --dark-0: 31 13 15;
+  --dark-1: 44 19 21;
+  --dark-2: 58 26 29;
+  --dark-border: 71 33 36;
+  --dark-text-1: 245 229 229;
+  --dark-text-2: 206 168 168;
+  --dark-text-3: 156 119 119;
 }
 
 [data-theme="sunset-ember"] {
@@ -191,29 +252,6 @@
   --brass-900: 67 23 36;
 }
 
-[data-theme="cyber-volt"] {
-  --terracotta-50: 249 253 240;
-  --terracotta-100: 241 250 217;
-  --terracotta-200: 224 245 173;
-  --terracotta-300: 205 239 122;
-  --terracotta-400: 180 231 56;
-  --terracotta-500: 159 224 0;
-  --terracotta-600: 130 184 0;
-  --terracotta-700: 102 143 0;
-  --terracotta-800: 76 108 0;
-  --terracotta-900: 54 76 0;
-  --brass-50: 243 248 245;
-  --brass-100: 225 238 231;
-  --brass-200: 192 218 203;
-  --brass-300: 153 195 171;
-  --brass-400: 101 165 129;
-  --brass-500: 58 140 94;
-  --brass-600: 48 115 77;
-  --brass-700: 37 90 60;
-  --brass-800: 28 67 45;
-  --brass-900: 20 48 32;
-}
-
 [data-theme="rose-noir"] {
   --terracotta-50: 250 245 246;
   --terracotta-100: 244 229 233;
@@ -235,6 +273,13 @@
   --brass-700: 70 28 40;
   --brass-800: 53 21 30;
   --brass-900: 37 15 21;
+  --dark-0: 31 17 23;
+  --dark-1: 44 24 33;
+  --dark-2: 58 31 44;
+  --dark-border: 71 38 54;
+  --dark-text-1: 245 230 235;
+  --dark-text-2: 206 173 184;
+  --dark-text-3: 156 128 138;
 }
 
 html {
@@ -244,6 +289,82 @@ html {
 body {
   background-color: #fdfcfa;
   color: #28221c;
+}
+
+/* Dark mode: inverts the light surfaces/text used across the site.
+   Toggled via [data-mode="dark"] on <html>, set by ThemeSwitcher
+   alongside the accent [data-theme]. Targets the actual utility
+   classes in use rather than requiring per-component dark: variants. */
+html[data-mode="dark"] body {
+  background-color: rgb(var(--dark-0));
+  color: rgb(var(--dark-text-1));
+}
+
+/* Base page surfaces: the lightest sections (white/cream/stone-50)
+   drop to the darkest shade so they read as the page background. */
+html[data-mode="dark"] .bg-white,
+html[data-mode="dark"] .bg-stone-50,
+html[data-mode="dark"] .bg-cream-50 {
+  background-color: rgb(var(--dark-0)) !important;
+}
+
+/* Mid surfaces: cards, alternating bands, raised panels — one shade up. */
+html[data-mode="dark"] .bg-stone-100,
+html[data-mode="dark"] .bg-cream-100,
+html[data-mode="dark"] .bg-sage-50 {
+  background-color: rgb(var(--dark-1)) !important;
+}
+
+/* Elevated surfaces: nested cards, hovers, dividers — one shade up again. */
+html[data-mode="dark"] .bg-stone-200,
+html[data-mode="dark"] .bg-cream-200 {
+  background-color: rgb(var(--dark-2)) !important;
+}
+
+/* Already-dark brand sections (header, footer, dark CTA bands) get the
+   same theme tint instead of staying a generic near-black. */
+html[data-mode="dark"] .bg-stone-900,
+html[data-mode="dark"] .bg-stone-950,
+html[data-mode="dark"] .bg-stone-950\/95,
+html[data-mode="dark"] .terrazzo-dark {
+  background-color: rgb(var(--dark-1)) !important;
+  background-image: none !important;
+}
+
+html[data-mode="dark"] .text-stone-900,
+html[data-mode="dark"] .text-stone-800 {
+  color: rgb(var(--dark-text-1)) !important;
+}
+
+html[data-mode="dark"] .text-stone-700,
+html[data-mode="dark"] .text-stone-600 {
+  color: rgb(var(--dark-text-2)) !important;
+}
+
+html[data-mode="dark"] .text-stone-500,
+html[data-mode="dark"] .text-stone-400 {
+  color: rgb(var(--dark-text-3)) !important;
+}
+
+html[data-mode="dark"] .border-stone-100,
+html[data-mode="dark"] .border-stone-200,
+html[data-mode="dark"] .border-stone-300,
+html[data-mode="dark"] .border-cream-100,
+html[data-mode="dark"] .border-cream-200 {
+  border-color: rgb(var(--dark-border)) !important;
+}
+
+html[data-mode="dark"] .shadow-soft,
+html[data-mode="dark"] .shadow-sm {
+  box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Inputs, which use white bg + dark text by default */
+html[data-mode="dark"] input,
+html[data-mode="dark"] textarea,
+html[data-mode="dark"] select {
+  background-color: rgb(var(--dark-1)) !important;
+  color: rgb(var(--dark-text-1)) !important;
 }
 
 /* Terrazzo-inspired speckle texture, used as a subtle background accent */
@@ -275,6 +396,32 @@ body {
     radial-gradient(circle at 5% 55%, #efeae3 0, #efeae3 3px, transparent 4px);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+/* Small circular logo badge — keeps its speckled terrazzo look in every
+   theme/mode, unlike .terrazzo-dark full sections which flatten in dark mode. */
+.logo-badge {
+  background-color: #211c17;
+  background-image:
+    radial-gradient(circle at 25% 30%, rgb(var(--terracotta-400)) 0, rgb(var(--terracotta-400)) 3px, transparent 4px),
+    radial-gradient(circle at 70% 20%, rgb(var(--brass-300)) 0, rgb(var(--brass-300)) 2.5px, transparent 3.5px),
+    radial-gradient(circle at 80% 70%, #efeae3 0, #efeae3 2px, transparent 3px),
+    radial-gradient(circle at 30% 75%, rgb(var(--terracotta-300)) 0, rgb(var(--terracotta-300)) 2px, transparent 3px);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
+
+.group:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .fade-in {

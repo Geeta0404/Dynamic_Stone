@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Testimonials",
   description:
     "Read what homeowners, contractors, and developers say about working with Dynamic Stone Inc. on their terrazzo projects.",
+  alternates: { canonical: "/testimonials" },
 };
 
 export default function TestimonialsPage() {

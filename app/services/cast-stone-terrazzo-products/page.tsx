@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Cast Stone / Terrazzo Products",
   description:
     "Custom cast stone and terrazzo products — countertops, tables, feature walls, columns, and precast steps — designed and crafted in Vancouver, BC.",
+  alternates: { canonical: "/services/cast-stone-terrazzo-products" },
 };
 
 const applications = [

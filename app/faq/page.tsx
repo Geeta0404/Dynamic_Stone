@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "FAQ & Process",
   description:
     "Answers to common questions about terrazzo, plus a step-by-step look at how Dynamic Stone Inc. plans and completes every project.",
+  alternates: { canonical: "/faq" },
 };
 
 export default function FAQPage() {

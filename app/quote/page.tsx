@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Get a Quote",
   description:
     "Request a free, no-obligation quote for your terrazzo flooring, countertop, or restoration project in Greater Vancouver.",
+  alternates: { canonical: "/quote" },
 };
 
 export default function QuotePage() {

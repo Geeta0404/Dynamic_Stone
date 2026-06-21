@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Care & Maintenance",
   description:
     "How to clean, seal, and care for your terrazzo floors and countertops — daily care tips, a resealing schedule, and dos and don'ts from Dynamic Stone Inc., Vancouver's terrazzo specialists.",
+  alternates: { canonical: "/care-maintenance" },
 };
 
 const cleaningTips = [
@@ -212,7 +213,7 @@ export default function CareMaintenancePage() {
               <span className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-terracotta-400 to-brass-400 transition-transform duration-300 group-hover:scale-x-100" />
             </div>
             <div className="group relative overflow-hidden rounded-2xl border border-terracotta-200/60 bg-white p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-terracotta-400/40 hover:shadow-soft">
-              <h3 className="font-serif text-xl font-semibold text-stone-900">Don't</h3>
+              <h3 className="font-serif text-xl font-semibold text-stone-900">Don&apos;t</h3>
               <ul className="mt-4 space-y-3 text-sm leading-relaxed text-stone-600">
                 {doDont.donts.map((item) => (
                   <li key={item} className="flex gap-3">

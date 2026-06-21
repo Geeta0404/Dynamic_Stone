@@ -7,19 +7,20 @@ export const metadata: Metadata = {
   title: "Portfolio",
   description:
     "Browse residential, commercial, and recreational terrazzo projects completed by Dynamic Stone Inc. across Greater Vancouver.",
+  alternates: { canonical: "/portfolio" },
 };
 
 const beforeAfterPairs = [
   {
     title: "Living Room Floor Restoration",
     location: "Lions Bay, BC",
-    before: "/images/Custom Terrazzo Design/project_Precast stepss.jpg",
+    before: "/images/Custom Terrazzo Design/project_Precast steps_b1.jpg",
     after: "/images/Custom Terrazzo Design/project_Precast steps.jpg",
   },
   {
     title: "Entranceway Resurfacing",
     location: "North Vancouver, BC",
-    before: "/images/Custom Terrazzo Design/project_Precast stepssss.jpg",
+    before: "/images/Custom Terrazzo Design/project_Precast steps_b2.jpg",
     after: "/images/Custom Terrazzo Design/project_Precast steps3.jpg",
   },
   {

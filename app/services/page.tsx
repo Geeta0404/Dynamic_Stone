@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Terrazzo flooring and epoxy stone solutions: consultation, design, installation, and restoration for residential and commercial projects across Vancouver & the Lower Mainland.",
+  alternates: { canonical: "/services" },
 };
 
 const serviceAreas = [
@@ -130,6 +131,8 @@ export default function ServicesPage() {
                     alt={service.alt}
                     fill
                     sizes="(min-width: 1024px) 50vw, 100vw"
+                    placeholder="blur"
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiNjNDc0NGEiLz48L3N2Zz4="
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-stone-950/0 to-transparent" />

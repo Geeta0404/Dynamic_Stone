@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Flooring Systems",
   description:
     "Rustic terrazzo, clear textured terrazzo, and epoxy stone & coloured quartz flooring systems for residential, commercial, and recreational spaces in Vancouver & the Lower Mainland.",
+  alternates: { canonical: "/services/flooring-systems" },
 };
 
 const systems = [

@@ -27,7 +27,7 @@ export default function MaterialGallery({
 
   return (
     <>
-      <div className="relative grid grid-cols-3 gap-4 lg:gap-5">
+      <div className="relative grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:gap-5">
         {angled && (
           <span
             className="pointer-events-none absolute -right-4 -top-4 z-0 hidden h-[40%] w-[40%] rounded-2xl border-2 border-terracotta-300/60 [clip-path:polygon(16px_0,100%_0,100%_calc(100%-16px),calc(100%-16px)_100%,0_100%,0_16px)] lg:block"
@@ -51,6 +51,8 @@ export default function MaterialGallery({
               alt={image.alt}
               fill
               sizes="(min-width: 1024px) 25vw, 50vw"
+              placeholder="blur"
+              blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiNjNDc0NGEiLz48L3N2Zz4="
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <span className="absolute inset-0 flex items-center justify-center bg-stone-950/0 transition-colors duration-300 group-hover:bg-stone-950/30">

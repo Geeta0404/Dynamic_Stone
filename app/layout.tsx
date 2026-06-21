@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import DemoBanner from "@/components/DemoBanner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
@@ -21,6 +22,10 @@ const inter = Inter({
   display: "swap",
 });
 
+// Site is still in build/demo. Set NEXT_PUBLIC_SITE_LIVE=true once it's
+// ready to go live, to drop the noindex flag without further code changes.
+const isLive = process.env.NEXT_PUBLIC_SITE_LIVE === "true";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -28,6 +33,14 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  robots: isLive
+    ? undefined
+    : {
+        index: false,
+        follow: false,
+        googleBot: { index: false, follow: false },
+      },
+  alternates: { canonical: "/" },
   openGraph: {
     title: `${siteConfig.name} | Custom Terrazzo, Vancouver BC`,
     description: siteConfig.description,
@@ -35,6 +48,11 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     locale: "en_CA",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} | Custom Terrazzo, Vancouver BC`,
+    description: siteConfig.description,
   },
 };
 
@@ -48,7 +66,7 @@ export default function RootLayout({
     "@type": "LocalBusiness",
     "@id": `${siteConfig.url}/#business`,
     name: siteConfig.name,
-    image: `${siteConfig.url}/og-image.jpg`,
+    image: `${siteConfig.url}/opengraph-image`,
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
@@ -85,8 +103,15 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-terracotta-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-cream-50"
+        >
+          Skip to main content
+        </a>
+        <DemoBanner />
         <Header />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <ThemeSwitcher />
         <WhatsAppButton />
