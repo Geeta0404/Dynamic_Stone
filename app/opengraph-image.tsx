@@ -4,16 +4,7 @@ import { siteConfig } from "@/lib/site-config";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-async function loadFont() {
-  const res = await fetch(
-    "https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2"
-  );
-  return res.arrayBuffer();
-}
-
-export default async function OpengraphImage() {
-  const interBold = await loadFont();
-
+export default function OpengraphImage() {
   return new ImageResponse(
     (
       <div
@@ -60,9 +51,6 @@ export default async function OpengraphImage() {
         </div>
       </div>
     ),
-    {
-      ...size,
-      fonts: [{ name: "Inter", data: interBold, weight: 700, style: "normal" }],
-    }
+    { ...size }
   );
 }
